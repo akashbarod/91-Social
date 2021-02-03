@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
+.round {
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.round label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 28px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 28px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.round label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 7px;
+  opacity: 0;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-45deg);
+  width: 12px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.round input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.round input[type="checkbox"]:checked + label {
+  background-color: blue;
+  border-color: white;
+}
+
+.round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+}
+
+.customcb {
+  width: 17px;
+  height: 17px;
+  margin: 2px 0 2px 0;
+  background: #ddd;
+  border-radius: 100%;
+  position: relative;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .5);
+}
+.customcb label.inner {
+  display: block;
+  width: 12.75px;
+  height: 12.75px;
+  border-radius: 100px;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  transition: all .5s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 2.125px;
+  left: 2.125px;
+  z-index: 1;
+  background: #eee;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .5);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .5);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .5)
+}
+.customcb label.outer {
+  margin-left: 25px;
+}
+.customcb [type=checkbox] {
+  display: none
+}
+.red.customcb input[type=checkbox]:checked+label.inner {
+  background: red
+}
+
+/* ..........button......... */
+
+.button1{
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 8%;
+  box-shadow: 6px 6px 12px silver, -6px -6px 12px white;
+  border: 2px solid transparent;
+  background: #F8F9F9;
+  font-size: small;
+    font-weight: 600;
+}
+
+.button1:hover{
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 8%;
+  box-shadow: 6px 6px 12px silver, -6px -6px 12px white;
+  border: 2px solid transparent;
+  background: #F8F9F9
+}
+
+.button2,.button2:hover{
+  color: blue;
+  border: 1px solid blue;
+  border-radius: 9px;
+  box-shadow: 6px 6px 12px silver, -6px -6px 12px white;
+  border: 1.5px solid blue;
+  background: #F8F9F9;
+  font-size: small;
+    font-weight: 600;
+}
+
+.button3,.button3:hover{
   color: white;
+  border: 1px solid white;
+  border-radius: 9px;
+  box-shadow: 6px 6px 12px silver, -6px -6px 12px white;
+  border: 1.5px solid transparent;
+  background-image: linear-gradient(to bottom right, grey, white);
+  font-size: small;
+    font-weight: 600;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button4,.button4:hover{
+  color: grey;
+  border: 1px solid white;
+  border-radius: 9px;
+  box-shadow: 6px 6px 12px silver, -6px -6px 12px white;
+  border: 1.5px solid transparent;
+  background-image: linear-gradient(180deg, grey, white);
+  font-size: small;
+    font-weight: 600;
 }

@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import './App.css'
+import Button from './Component/Button/Button'
+import Textbox from './Component/Textbox/Textbox'
+import Checkbox from './Component/Checkbox/Checkbox'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {}
+  }
+
+  render() {
+    return (
+      <>
+        <div className="container">
+          <div className="row">
+            <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <p className="heading">Checkbox</p>
+              <Checkbox />
+            </div>
+            <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <p className="heading">Button</p>
+              <Button />
+            </div>
+            <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <p className="heading">Textbox</p>
+              <Textbox />
+            </div>
+          </div>
+        </div>
+      </>
+    )
+  }
 }
 
-export default App;
+export default App
